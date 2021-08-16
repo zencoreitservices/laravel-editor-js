@@ -1,0 +1,1 @@
+<h{{ $data['level'] }} class="block-header">{!! $data['text'] !!}</h{{ $data['level'] }}>

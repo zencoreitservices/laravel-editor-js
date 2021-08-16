@@ -1,0 +1,20 @@
+{
+    "name": "zencoreitservices/laravel-editor-js",
+    "description": "Package converts editorjs blocks into html.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dominik",
+            "email": "domin1992@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelEditorJs\\": "src/"
+        }
+    }
+}
