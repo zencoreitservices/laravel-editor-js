@@ -47,4 +47,25 @@ class BlocksManager
             'data' => (array)$block->data,
         ])->render();
     }
+
+    public function countChar()
+    {
+        $counter = 0;
+
+        foreach($this->data->blocks as $block){
+            if(in_array($block->type, ['embed', 'image']) && isset($block->data->caption)){
+                $counter += strlen($block->data->caption);
+            }
+            elseif($block->type == 'list' && isset($block->data->items)){
+                foreach($block->data->items as $item){
+                    $counter += strlen($item);
+                }
+            }
+            elseif(isset($block->data->text)){
+                $counter += strlen($block->data->text);
+            }
+        }
+
+        return $counter;
+    }
 }
