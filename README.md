@@ -20,6 +20,10 @@ Publish views
 
 ```artisan vendor:publish --tag=laravel-editor-js-views```
 
+Publish translation
+
+```artisan vendor:publish --tag=laravel-editor-js-lang```
+
 Add routes
 
 ```php

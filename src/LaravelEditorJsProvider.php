@@ -26,6 +26,10 @@ class LaravelEditorJsProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../config/laravel-editor-js.php' => config_path('laravel-editor-js.php'),
         ], 'laravel-editor-js-config');
+
+        $this->publishes([
+            __DIR__.'/../resources/lang' => resource_path('lang/vendor/laravel-editor-js'),
+        ], 'laravel-editor-js-lang');
     }
 
     /**
