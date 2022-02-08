@@ -31,6 +31,11 @@ class BlocksManager
         return $this->data->version;
     }
 
+    public function hasBlocks()
+    {
+        return (bool)count($this->getBlocks());
+    }
+
     public function renderHtml()
     {
         $html = '';
