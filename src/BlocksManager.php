@@ -49,7 +49,7 @@ class BlocksManager
     public function renderHtmlBlock($block)
     {
         return view('laravel-editor-js::block-'.$block->type, [
-            'data' => (array)$block->data,
+            'data' => json_decode(json_encode($block->data), true),
         ])->render();
     }
 
