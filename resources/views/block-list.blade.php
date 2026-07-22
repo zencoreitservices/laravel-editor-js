@@ -5,7 +5,7 @@
 @endif
 
 @foreach($data['items'] as $item)
-<li class="block-list__item">{!! $item !!}</li>
+@include('laravel-editor-js::block-list-item', ['item' => $item, 'style' => $data['style']])
 @endforeach
 
 @if($data['style'] == 'ordered')
