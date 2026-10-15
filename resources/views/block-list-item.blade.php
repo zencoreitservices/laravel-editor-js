@@ -1,3 +1,4 @@
+@php($item = is_array($item) ? $item : ['content' => $item])
 <li class="block-list__item">
 {!! $item['content'] !!}
 @if(!empty($item['items']))
